@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="xyz.berial.allinpay" version="0.01" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>allinpay</name>
+    <js-module name="allinpay" src="www/allinpay.js">
+        <clobbers target="cordova.plugins.allinpay"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="allinpay">
+                <param name="android-package" value="xyz.berial.allinpay"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/Allinpay.java" target-dir="src/xyz/berial/allinpay"/>
+    </platform>
+</plugin>
